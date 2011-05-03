@@ -176,16 +176,8 @@
         <fo:block 
         	text-align="end" 
         	font-style="italic"
-      		text-indent="{$CitationBlockIndent}" 
       		font-family="{$MainFont}" 
-      		font-weight="bold"
-      		font-size="{$UsualTextSize}" 
-      		space-before.minimum="{$CitationBlockSpaceMinimum}"
-      		space-before.maximum="{$CitationBlockSpaceMaximum}" 
-      		space-before.optimum="{$CitationBlockSpacePreferred}"
-      		space-after.minimum="{$CitationBlockSpaceMinimum}" 
-      		space-after.maximum="{$CitationBlockSpaceMaximum}"
-      		space-after.optimum="{$CitationBlockSpacePreferred}">
+      		font-weight="bold">
       <xsl:apply-templates />
     </fo:block>
   </xsl:template>
