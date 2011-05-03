@@ -1,0 +1,8 @@
+=========================================================================
+==      NOTICE file for use with the Apache License, Version 2.0,      ==
+=========================================================================
+
+Copyright 2011, Robert Burrell Donkin
+
+S5toPDF contains source developed by
+ Robert Burrell Donkin http://robertburrelldonkin.name
