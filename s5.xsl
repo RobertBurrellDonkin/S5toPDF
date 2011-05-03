@@ -198,10 +198,6 @@
     <xsl:apply-templates />
   </xsl:template>
   
-  <xsl:template match="xhtml:applet">
-    <!-- Ignore content -->
-  </xsl:template>
-
   <xsl:template match="xhtml:area">
     <xsl:apply-templates />
   </xsl:template>
@@ -248,14 +244,6 @@
   <xsl:template match="xhtml:br">
     <fo:block/>
   </xsl:template>  
- 
-  <xsl:template match="xhtml:button">
-    <!-- Ignore -->
-  </xsl:template> 
-  
-  <xsl:template match="xhtml:caption">
-    <!-- TODO: Support tables -->
-  </xsl:template>
   
   <xsl:template match="xhtml:center">
     <!-- 
@@ -424,10 +412,6 @@
     <!-- Ignore -->
   </xsl:template> 
 
-  <xsl:template match="xhtml:input">
-    <!-- Ignore -->
-  </xsl:template> 
-
   <xsl:template match="xhtml:ins">
     <fo:inline text-decoration='line-through'>
       <xsl:apply-templates />
@@ -439,15 +423,7 @@
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>
-
-  <xsl:template match="xhtml:label">
-    <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:legend">
-    <!-- Ignore -->
-  </xsl:template> 
-
+  
   <xsl:template match="xhtml:link">
     <!-- Ignore -->
   </xsl:template> 
@@ -512,18 +488,6 @@
         </fo:block>
       </fo:list-item-body>
     </fo:list-item>
-  </xsl:template>
-  
-  <xsl:template match="xhtml:optgroup">
-    <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:option">
-    <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:param">
-    <!-- Ignore -->
   </xsl:template> 
 
   <xsl:template match="xhtml:pre">

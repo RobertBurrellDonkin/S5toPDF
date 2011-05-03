@@ -24,54 +24,17 @@
   
    Convert S5 XML to XSL-FO
    
-   Tables styles
+   Style forms elements 
     
   -->
   
-  <!--  
-  <xsl:template match="xhtml:table">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:tbody">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:td">
-TODO: Support tables 
-  </xsl:template>
+  <!-- Ignore forms
   
-  <xsl:template match="xhtml:tfoot">
-TODO: Support tables 
-  </xsl:template>
+  <xsl:template match="xhtml:optgroup"/>
+  <xsl:template match="xhtml:option"/>
+  <xsl:template match="xhtml:label"/>
+  <xsl:template match="xhtml:legend"/>
+  <xsl:template match="xhtml:button"/>
 
-  <xsl:template match="xhtml:th">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:thead">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:tr">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:tt">
-TODO: Support tables 
-  </xsl:template>
-  
-  
-  <xsl:template match="xhtml:col">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:colgroup">
-TODO: Support tables 
-  </xsl:template>
-  
-    <xsl:template match="xhtml:caption">
-TODO: Support tables
-  </xsl:template>
-  -->
+   -->
 </xsl:stylesheet>

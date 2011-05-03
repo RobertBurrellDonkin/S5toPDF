@@ -24,54 +24,15 @@
   
    Convert S5 XML to XSL-FO
    
-   Tables styles
+   Style dynamic elements
     
   -->
   
-  <!--  
-  <xsl:template match="xhtml:table">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:tbody">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:td">
-TODO: Support tables 
-  </xsl:template>
+  <!-- Ignore dynamic elements
   
-  <xsl:template match="xhtml:tfoot">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:th">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:thead">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:tr">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:tt">
-TODO: Support tables 
-  </xsl:template>
+  <xsl:template match="xhtml:param"/>  
+  <xsl:template match="xhtml:applet"/>
   
   
-  <xsl:template match="xhtml:col">
-TODO: Support tables 
-  </xsl:template>
-
-  <xsl:template match="xhtml:colgroup">
-TODO: Support tables 
-  </xsl:template>
-  
-    <xsl:template match="xhtml:caption">
-TODO: Support tables
-  </xsl:template>
-  -->
+   -->
 </xsl:stylesheet>
