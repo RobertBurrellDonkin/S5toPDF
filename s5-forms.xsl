@@ -38,6 +38,6 @@
   <xsl:template match="xhtml:fieldset"/>
   <xsl:template match="xhtml:form"/>
   <xsl:template match="xhtml:select"/>
-  
+  <xsl:template match="xhtml:textarea"/>
    -->
 </xsl:stylesheet>

@@ -207,14 +207,6 @@
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>  
-
-  <xsl:template match="xhtml:base">
-    <!-- Ignore -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:basefont">
-    <!-- Ignore -->
-  </xsl:template>   
     
   <xsl:template match="xhtml:bdo">
     <!-- Ignore -->
@@ -236,10 +228,6 @@
       <xsl:apply-templates />
     </fo:block>
   </xsl:template>
-  
-  <xsl:template match="xhtml:body">
-    <!-- Ignore -->
-  </xsl:template>  
   
   <xsl:template match="xhtml:br">
     <fo:block/>
@@ -388,10 +376,6 @@
     </fo:block>
   </xsl:template>
 
-  <xsl:template match="xhtml:iframe">
-    <!-- Ignore -->
-  </xsl:template> 
-
   <xsl:template match="xhtml:ins">
     <fo:inline text-decoration='line-through'>
       <xsl:apply-templates />
@@ -535,10 +519,6 @@
     <fo:inline font-weight="bold">
       <xsl:apply-templates />
     </fo:inline>
-  </xsl:template>
-
-  <xsl:template match="xhtml:textarea">
-    <!-- Ignore -->
   </xsl:template>
 
   <xsl:template match="xhtml:u">

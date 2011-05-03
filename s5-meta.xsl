@@ -24,17 +24,14 @@
   
    Convert S5 XML to XSL-FO
    
-   Styles structural elements
+   Styles meta information
     
   -->
   
   <!--  
-  
-  <xsl:template match="xhtml:frame"/>
-  <xsl:template match="xhtml:frameset"/>  
-  <xsl:template match="xhtml:head"/>
-  <xsl:template match="xhtml:noframes"/>
-  <xsl:template match="xhtml:body"/>
-  <xsl:template match="xhtml:iframe"/>
+
+  <xsl:template match="xhtml:base"/>
+  <xsl:template match="xhtml:basefont"/>
+
   -->
 </xsl:stylesheet>
