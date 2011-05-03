@@ -24,17 +24,16 @@
   
    Convert S5 XML to XSL-FO
    
-   Style dynamic elements
+   Styles structural elements
     
   -->
   
-  <!-- Ignore dynamic elements
+  <!--  
   
-  <xsl:template match="xhtml:param"/>  
-  <xsl:template match="xhtml:applet"/>
-  <xsl:template match="xhtml:noscript"/> 
-  <xsl:template match="xhtml:object"/>
-  <xsl:template match="xhtml:script"/>s
+  <xsl:template match="xhtml:frame"/>
+  <xsl:template match="xhtml:frameset"/>  
+  <xsl:template match="xhtml:head"/>
+  <xsl:template match="xhtml:noframes"/>
   
-   -->
+  -->
 </xsl:stylesheet>

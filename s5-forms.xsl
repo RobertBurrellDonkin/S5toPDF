@@ -35,6 +35,9 @@
   <xsl:template match="xhtml:label"/>
   <xsl:template match="xhtml:legend"/>
   <xsl:template match="xhtml:button"/>
-
+  <xsl:template match="xhtml:fieldset"/>
+  <xsl:template match="xhtml:form"/>
+  <xsl:template match="xhtml:select"/>
+  
    -->
 </xsl:stylesheet>

@@ -318,30 +318,10 @@
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>
-  
-  <xsl:template match="xhtml:fieldset">
-    <!-- Ignore -->
-  </xsl:template> 
 
   <xsl:template match="xhtml:font">
     <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:form">
-    <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:frame">
-    <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:frameset">
-    <!-- Ignore -->
-  </xsl:template> 
-    
-  <xsl:template match="xhtml:head">
-    <!-- Ignore -->
-  </xsl:template> 
+  </xsl:template>  
   
   <xsl:template match='xhtml:h1'>
     <fo:block font-size="{$H1Size}" font-family="{$MainFont}"
@@ -456,19 +436,7 @@
   <xsl:template match="xhtml:meta">
     <!-- Ignore -->
   </xsl:template> 
-
-  <xsl:template match="xhtml:noframes">
-    <!-- Ignore -->
-  </xsl:template> 
   
-  <xsl:template match="xhtml:noscript">
-    <!-- Ignore -->
-  </xsl:template> 
-  
-  <xsl:template match="xhtml:object">
-    <!-- Ignore -->
-  </xsl:template> 
- 
   <xsl:template match="xhtml:ol">
     <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
       <xsl:apply-templates />
@@ -530,15 +498,6 @@
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>
-  
-  <xsl:template match="xhtml:script">
-    <!-- Ignore -->
-  </xsl:template> 
-  
-  <xsl:template match="xhtml:select">
-    <!-- Ignore -->
-  </xsl:template> 
-
   
   <xsl:template match="xhtml:small">
     <fo:inline font-size="{$SmallerTextSize}">
