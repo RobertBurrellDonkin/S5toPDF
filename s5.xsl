@@ -276,14 +276,6 @@
     </fo:inline>
   </xsl:template>
 
-  <xsl:template match="xhtml:col">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:colgroup">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
   <xsl:template match="xhtml:del">
     <fo:inline text-decoration='line-through'>
       <xsl:apply-templates />
@@ -622,42 +614,10 @@
     </fo:inline>
   </xsl:template>
 
-  <xsl:template match="xhtml:table">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:tbody">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:td">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-  
   <xsl:template match="xhtml:textarea">
     <!-- Ignore -->
   </xsl:template>
 
-  <xsl:template match="xhtml:tfoot">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:th">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:thead">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:tr">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:tt">
-    <!-- TODO: Support tables -->
-  </xsl:template>
-  
   <xsl:template match="xhtml:u">
     <fo:inline text-decoration='underline'>
       <xsl:apply-templates />
