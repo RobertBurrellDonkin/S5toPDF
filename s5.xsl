@@ -165,22 +165,10 @@
 
   <!-- 
     
-    Styles For Elements
+  Elements are styled by included sheets.
     
   -->
  
-  <!-- 
-    Important
-  -->
-  
-  <xsl:template match="xhtml:a">
-    <xsl:apply-templates />
-  </xsl:template>
-    
-  <xsl:template match="xhtml:bdo">
-    <!-- Ignore -->
-  </xsl:template>  
-
   <xsl:include href="s5-headings.xsl"/>
   <xsl:include href="s5-graphics.xsl"/>
   <xsl:include href="s5-lists.xsl"/>
@@ -188,6 +176,7 @@
   <xsl:include href="s5-phrase-styles.xsl"/>
   <xsl:include href="s5-quotes.xsl"/>
   <xsl:include href="s5-lines.xsl"/>
+  <xsl:include href="s5-meta.xsl"/>
   <xsl:include href="s5-structure.xsl"/>
 <!-- Uncomment to support deprecated elements
   <xsl:include href="s5-deprecated.xsl"/>

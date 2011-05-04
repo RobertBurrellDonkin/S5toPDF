@@ -33,5 +33,11 @@
   <xsl:template match="xhtml:base"/>
   <xsl:template match="xhtml:link"/>
   <xsl:template match="xhtml:meta"/>
+  <xsl:template match="xhtml:bdo"/>
   -->
+  
+  <xsl:template match="xhtml:a">
+    <xsl:apply-templates />
+  </xsl:template>  
+  
 </xsl:stylesheet>
