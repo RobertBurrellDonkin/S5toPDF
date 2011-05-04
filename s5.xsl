@@ -204,12 +204,6 @@
     </fo:inline>
   </xsl:template>
 
-  <xsl:template match="xhtml:del">
-    <fo:inline text-decoration='line-through'>
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-
   <xsl:template match="xhtml:dfn">
     <fo:inline font-style="italic">
       <xsl:apply-templates />
@@ -237,12 +231,6 @@
   
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:ins">
-    <fo:inline text-decoration='line-through'>
-      <xsl:apply-templates />
-    </fo:inline>
   </xsl:template>
 
   <xsl:template match="xhtml:kbd">

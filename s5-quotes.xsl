@@ -74,5 +74,16 @@
     </fo:block>
   </xsl:template> 
 
+  <xsl:template match="xhtml:del">
+    <fo:inline text-decoration='line-through'>
+      <xsl:apply-templates />
+    </fo:inline>
+  </xsl:template>
+
+  <xsl:template match="xhtml:ins">
+    <fo:inline text-decoration='line-through'>
+      <xsl:apply-templates />
+    </fo:inline>
+  </xsl:template>
   
 </xsl:stylesheet>
