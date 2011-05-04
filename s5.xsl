@@ -176,18 +176,10 @@
   <xsl:template match="xhtml:a">
     <xsl:apply-templates />
   </xsl:template>
-  
-  <xsl:template match="xhtml:address">
-    <xsl:apply-templates />
-  </xsl:template>
     
   <xsl:template match="xhtml:bdo">
     <!-- Ignore -->
   </xsl:template>  
-  
-  <xsl:template match="xhtml:div">
-    <xsl:apply-templates />
-  </xsl:template>
 
   <xsl:include href="s5-headings.xsl"/>
   <xsl:include href="s5-graphics.xsl"/>
@@ -196,21 +188,10 @@
   <xsl:include href="s5-phrase-styles.xsl"/>
   <xsl:include href="s5-quotes.xsl"/>
   <xsl:include href="s5-lines.xsl"/>
+  <xsl:include href="s5-structure.xsl"/>
 <!-- Uncomment to support deprecated elements
   <xsl:include href="s5-deprecated.xsl"/>
  -->
-  
-  <xsl:template match="xhtml:hr">
-     <!-- TODO: Support hr -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:span">
-    <xsl:apply-templates />
-  </xsl:template>
-
-  <xsl:template match="xhtml:style">
-    <xsl:apply-templates />
-  </xsl:template>
 
   <xsl:template match='*'>
     <!-- Do Nothing (for now) -->

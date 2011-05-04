@@ -37,4 +37,28 @@
   <xsl:template match="xhtml:body"/>
   <xsl:template match="xhtml:iframe"/>
   -->
+  
+    
+  <xsl:template match="xhtml:address">
+    <xsl:apply-templates />
+  </xsl:template>
+   
+  <!-- 
+  <xsl:template match="xhtml:hr">
+TODO: Support hr 
+  </xsl:template>
+   -->
+
+  <xsl:template match="xhtml:span">
+    <xsl:apply-templates />
+  </xsl:template>
+
+  <xsl:template match="xhtml:style">
+    <xsl:apply-templates />
+  </xsl:template>
+  
+  <xsl:template match="xhtml:div">
+    <xsl:apply-templates />
+  </xsl:template>
+  
 </xsl:stylesheet>
