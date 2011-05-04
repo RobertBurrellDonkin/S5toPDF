@@ -176,14 +176,6 @@
   <xsl:template match="xhtml:a">
     <xsl:apply-templates />
   </xsl:template>
-
-  <xsl:template match="xhtml:abbr">
-    <xsl:apply-templates />
-  </xsl:template>  
-
-  <xsl:template match="xhtml:acronym">
-    <xsl:apply-templates />
-  </xsl:template> 
   
   <xsl:template match="xhtml:address">
     <xsl:apply-templates />
@@ -192,38 +184,20 @@
   <xsl:template match="xhtml:bdo">
     <!-- Ignore -->
   </xsl:template>  
-  
-  
+    
   <xsl:template match="xhtml:br">
     <fo:block/>
   </xsl:template>  
-   
-  <xsl:template match="xhtml:code">
-    <fo:inline font-family="monospace">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-
-  <xsl:template match="xhtml:dfn">
-    <fo:inline font-style="italic">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
   
   <xsl:template match="xhtml:div">
     <xsl:apply-templates />
-  </xsl:template>
-  
-  <xsl:template match="xhtml:em">
-    <fo:inline font-style="italic">
-      <xsl:apply-templates />
-    </fo:inline>
   </xsl:template>
 
   <xsl:include href="s5-headings.xsl"/>
   <xsl:include href="s5-graphics.xsl"/>
   <xsl:include href="s5-lists.xsl"/>
   <xsl:include href="s5-font-styles.xsl"/>
+  <xsl:include href="s5-phrase-styles.xsl"/>
   <xsl:include href="s5-quotes.xsl"/>
 <!-- Uncomment to support deprecated elements
   <xsl:include href="s5-deprecated.xsl"/>
@@ -232,12 +206,6 @@
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
   </xsl:template>
-
-  <xsl:template match="xhtml:kbd">
-    <fo:inline font-family="monospace">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template> 
   
   <xsl:template match="xhtml:p">
     <fo:block text-indent="{$MainIndent}" font-family="{$MainFont}"
@@ -247,15 +215,7 @@
       space-after.optimum="{$ParagraphSpacePreferred}">
       <xsl:apply-templates />
     </fo:block>
-  </xsl:template>
-    
-  
-  <xsl:template match="xhtml:samp">
-    <fo:inline font-family="monospace">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-  
+  </xsl:template>  
 
   <xsl:template match="xhtml:span">
     <xsl:apply-templates />
@@ -275,20 +235,7 @@
     <fo:inline font-size="{$SmallerTextSize}" baseline-shift="super">
       <xsl:apply-templates />
     </fo:inline>
-  </xsl:template>
-
-  <xsl:template match="xhtml:strong">
-    <fo:inline font-weight="bold">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-    
-  <xsl:template match="xhtml:var">
-    <fo:inline font-style="italic">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-  
+  </xsl:template>  
 
   <xsl:template match='*'>
     <!-- Do Nothing (for now) -->
