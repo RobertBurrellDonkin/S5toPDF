@@ -20,6 +20,8 @@
    limitations under the License.
 -->  
 
+  <xsl:import href="s5-graphics.xsl"/>
+
   <!-- 
   
   Output XML suitable for XSL-FO
@@ -197,10 +199,6 @@
   <xsl:template match="xhtml:address">
     <xsl:apply-templates />
   </xsl:template>
-  
-  <xsl:template match="xhtml:area">
-    <xsl:apply-templates />
-  </xsl:template>
 
   <xsl:template match="xhtml:b">
     <fo:inline font-weight="bold">
@@ -307,51 +305,7 @@
     </fo:inline>
   </xsl:template>
 
-  <xsl:template match="xhtml:font">
-    <!-- Ignore -->
-  </xsl:template>  
-  
-  <xsl:template match='xhtml:h1'>
-    <fo:block font-size="{$H1Size}" font-family="{$MainFont}"
-      font-weight="bold" space-before="{$HeaderSpace}" space-after="{$HeaderSpace}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>
-
-  <xsl:template match="xhtml:h2">
-    <fo:block font-size="{$H2Size}" font-family="{$MainFont}"
-      font-weight="bold" space-before="{$HeaderSpace}" space-after="{$HeaderSpace}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>
-
-  <xsl:template match="xhtml:h3">
-    <fo:block font-size="{$H3Size}" font-family="{$MainFont}"
-      font-weight="bold" space-before="{$HeaderSpace}" space-after="{$HeaderSpace}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>
-
-  <xsl:template match="xhtml:h4">
-    <fo:block font-size="{$H4Size}" font-family="{$MainFont}"
-      font-weight="bold" space-before="{$HeaderSpace}" space-after="{$HeaderSpace}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>
-  
-  <xsl:template match="xhtml:h5">
-    <fo:block font-size="{$H5Size}" font-family="{$MainFont}"
-      font-weight="bold" space-before="{$HeaderSpace}" space-after="{$HeaderSpace}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>
-  
-  <xsl:template match="xhtml:h6">
-    <fo:block font-size="{$H6Size}" font-family="{$MainFont}"
-      font-weight="bold" space-before="{$HeaderSpace}" space-after="{$HeaderSpace}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>
+  <xsl:include href="s5-headings.xsl"/>
   
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
@@ -361,19 +315,6 @@
     <fo:inline font-style="italic">
       <xsl:apply-templates />
     </fo:inline>
-  </xsl:template>
-
-  <xsl:template match="xhtml:img">
-    <fo:block>
-      <xsl:element name="external-graphic"
-        namespace="http://www.w3.org/1999/XSL/Format">
-        <xsl:attribute name='src'>
-          url('
-          <xsl:value-of select='@src'></xsl:value-of>
-          ')
-        </xsl:attribute>
-      </xsl:element>
-    </fo:block>
   </xsl:template>
 
   <xsl:template match="xhtml:ins">
@@ -386,14 +327,6 @@
     <fo:inline font-family="monospace">
       <xsl:apply-templates />
     </fo:inline>
-  </xsl:template>
-  
-  <xsl:template match="xhtml:link">
-    <!-- Ignore -->
-  </xsl:template> 
-
-  <xsl:template match="xhtml:map">
-    <!-- Ignore -->
   </xsl:template> 
 
   <xsl:template match="xhtml:menu">
@@ -416,10 +349,6 @@
       </fo:list-item-body>
     </fo:list-item>
   </xsl:template>
-
-  <xsl:template match="xhtml:meta">
-    <!-- Ignore -->
-  </xsl:template> 
   
   <xsl:template match="xhtml:ol">
     <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">

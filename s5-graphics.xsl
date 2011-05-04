@@ -24,16 +24,26 @@
   
    Convert S5 XML to XSL-FO
    
-   Styles meta information
+   Styles graphics elements
     
   -->
   
-  <!--  
-
-  <xsl:template match="xhtml:base"/>
-  <xsl:template match="xhtml:basefont"/>
-  <xsl:template match="xhtml:link"/>
-  <xsl:template match="xhtml:meta"/>
-  <xsl:template match="xhtml:font"/>
+  
+  <xsl:template match="xhtml:img">
+    <fo:block>
+      <xsl:element name="external-graphic"
+        namespace="http://www.w3.org/1999/XSL/Format">
+        <xsl:attribute name='src'>
+          url('
+          <xsl:value-of select='@src'></xsl:value-of>
+          ')
+        </xsl:attribute>
+      </xsl:element>
+    </fo:block>
+  </xsl:template>
+  
+  <!-- Ignore  
+  <xsl:template match="xhtml:map"/>
+  <xsl:template match="xhtml:area"/>
   -->
 </xsl:stylesheet>
