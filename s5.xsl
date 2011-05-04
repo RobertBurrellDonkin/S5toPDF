@@ -188,22 +188,10 @@
   <xsl:template match="xhtml:address">
     <xsl:apply-templates />
   </xsl:template>
-
-  <xsl:template match="xhtml:b">
-    <fo:inline font-weight="bold">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>  
     
   <xsl:template match="xhtml:bdo">
     <!-- Ignore -->
   </xsl:template>  
-  
-  <xsl:template match="xhtml:big">
-    <fo:inline font-size="{$BiggerTextSize}">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
   
   
   <xsl:template match="xhtml:br">
@@ -248,7 +236,7 @@
   <xsl:include href="s5-headings.xsl"/>
   <xsl:include href="s5-graphics.xsl"/>
   <xsl:include href="s5-lists.xsl"/>
-  <xsl:include href="s5-text.xsl"/>
+  <xsl:include href="s5-font-styles.xsl"/>
   <xsl:include href="s5-quotes.xsl"/>
 <!-- Uncomment to support deprecated elements
   <xsl:include href="s5-deprecated.xsl"/>
@@ -256,12 +244,6 @@
   
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:i">
-    <fo:inline font-style="italic">
-      <xsl:apply-templates />
-    </fo:inline>
   </xsl:template>
 
   <xsl:template match="xhtml:ins">
@@ -286,11 +268,6 @@
     </fo:block>
   </xsl:template>
     
-  <xsl:template match="xhtml:s">
-    <fo:inline text-decoration='line-through'>
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
   
   <xsl:template match="xhtml:samp">
     <fo:inline font-family="monospace">
@@ -298,20 +275,9 @@
     </fo:inline>
   </xsl:template>
   
-  <xsl:template match="xhtml:small">
-    <fo:inline font-size="{$SmallerTextSize}">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
 
   <xsl:template match="xhtml:span">
     <xsl:apply-templates />
-  </xsl:template>
-
-  <xsl:template match="xhtml:strike">
-    <fo:inline text-decoration='line-through'>
-      <xsl:apply-templates />
-    </fo:inline>
   </xsl:template>
 
   <xsl:template match="xhtml:style">
@@ -332,12 +298,6 @@
 
   <xsl:template match="xhtml:strong">
     <fo:inline font-weight="bold">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-
-  <xsl:template match="xhtml:u">
-    <fo:inline text-decoration='underline'>
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>
