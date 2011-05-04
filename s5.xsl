@@ -259,39 +259,6 @@
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>
-
-  <xsl:template match="xhtml:dir">
-    <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}" font-family="monospace">
-      <xsl:apply-templates />
-    </fo:list-block>
-  </xsl:template>
-
-  <xsl:template match="xhtml:dir/xhtml:li">
-    <fo:list-item space-after="{$ListItemSpace}">
-      <fo:list-item-label start-indent="{$ListIndent}">
-        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
-          &#x2022;
-        </fo:block>
-      </fo:list-item-label>
-      <fo:list-item-body start-indent="{$ListTextIndent}">
-        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
-          <xsl:apply-templates />
-        </fo:block>
-      </fo:list-item-body>
-    </fo:list-item>
-  </xsl:template>
-
-  <xsl:template match="xhtml:dl">
-    <!-- TODO: Support definition lists -->
-  </xsl:template>
-
-  <xsl:template match="xhtml:dt">
-    <!-- TODO: Support definition lists -->
-  </xsl:template>
-  
-  <xsl:template match="xhtml:dd">
-     <!-- TODO: Support definition lists -->
-  </xsl:template>
   
   <xsl:template match="xhtml:div">
     <xsl:apply-templates />
@@ -305,6 +272,10 @@
 
   <xsl:include href="s5-headings.xsl"/>
   <xsl:include href="s5-graphics.xsl"/>
+  <xsl:include href="s5-lists.xsl"/>
+<!-- Uncomment to support deprecated elements
+  <xsl:include href="s5-deprecated.xsl"/>
+ -->
   
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
@@ -328,26 +299,6 @@
     </fo:inline>
   </xsl:template> 
 
-  <xsl:template match="xhtml:menu">
-    <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
-      <xsl:apply-templates />
-    </fo:list-block>
-  </xsl:template>
-
-  <xsl:template match="xhtml:menu/xhtml:li">
-    <fo:list-item space-after="{$ListItemSpace}">
-      <fo:list-item-label start-indent="{$ListIndent}">
-        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
-          &#x2022;
-        </fo:block>
-      </fo:list-item-label>
-      <fo:list-item-body start-indent="{$ListTextIndent}">
-        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
-          <xsl:apply-templates />
-        </fo:block>
-      </fo:list-item-body>
-    </fo:list-item>
-  </xsl:template>
   
   <xsl:template match="xhtml:ol">
     <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
