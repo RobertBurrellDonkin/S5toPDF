@@ -24,14 +24,12 @@
   
    Convert S5 XML to XSL-FO
    
-   Styles meta information
+   Styles text elements
     
   -->
   
   <!--  
-
-  <xsl:template match="xhtml:base"/>
-  <xsl:template match="xhtml:link"/>
-  <xsl:template match="xhtml:meta"/>
+  <xsl:template match="xhtml:basefont"/>
+  <xsl:template match="xhtml:font"/>
   -->
 </xsl:stylesheet>
