@@ -68,4 +68,61 @@ Definition Lists
   <xsl:template match="xhtml:dd"/>
  -->
 
+
+<!-- 
+
+
+
+====================================================================================
+Ordered Lists
+-->
+  <xsl:template match="xhtml:ol">
+    <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
+      <xsl:apply-templates />
+    </fo:list-block>
+  </xsl:template>
+  
+  <xsl:template match="xhtml:ol/xhtml:li">
+    <fo:list-item space-after="{$ListItemSpace}">
+      <fo:list-item-label start-indent="{$ListIndent}">
+        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
+          <xsl:number />          .
+        </fo:block>
+      </fo:list-item-label>
+      <fo:list-item-body start-indent="{$ListTextIndent}">
+        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
+          <xsl:apply-templates />
+        </fo:block>
+      </fo:list-item-body>
+    </fo:list-item>
+  </xsl:template> 
+
+<!-- 
+
+
+
+====================================================================================
+Unordered Lists
+-->
+  <xsl:template match="xhtml:ul">
+    <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
+      <xsl:apply-templates />
+    </fo:list-block>
+  </xsl:template>
+
+  <xsl:template match="xhtml:ul/xhtml:li">
+    <fo:list-item space-after="{$ListItemSpace}">
+      <fo:list-item-label start-indent="{$ListIndent}">
+        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
+          &#x2022;
+        </fo:block>
+      </fo:list-item-label>
+      <fo:list-item-body start-indent="{$ListTextIndent}">
+        <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
+          <xsl:apply-templates />
+        </fo:block>
+      </fo:list-item-body>
+    </fo:list-item>
+  </xsl:template>
+
 </xsl:stylesheet>
