@@ -20,8 +20,6 @@
    limitations under the License.
 -->  
 
-  <xsl:import href="s5-graphics.xsl"/>
-
   <!-- 
   
   Output XML suitable for XSL-FO
@@ -306,6 +304,7 @@
   </xsl:template>
 
   <xsl:include href="s5-headings.xsl"/>
+  <xsl:include href="s5-graphics.xsl"/>
   
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
