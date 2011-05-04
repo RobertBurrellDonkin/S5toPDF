@@ -225,18 +225,6 @@
     <xsl:apply-templates />
   </xsl:template>
 
-  <xsl:template match="xhtml:sub">
-    <fo:inline font-size="{$SmallerTextSize}" baseline-shift="sub">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>
-
-  <xsl:template match="xhtml:sup">
-    <fo:inline font-size="{$SmallerTextSize}" baseline-shift="super">
-      <xsl:apply-templates />
-    </fo:inline>
-  </xsl:template>  
-
   <xsl:template match='*'>
     <!-- Do Nothing (for now) -->
   </xsl:template>
