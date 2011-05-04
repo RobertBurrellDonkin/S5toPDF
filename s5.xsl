@@ -184,10 +184,6 @@
   <xsl:template match="xhtml:bdo">
     <!-- Ignore -->
   </xsl:template>  
-    
-  <xsl:template match="xhtml:br">
-    <fo:block/>
-  </xsl:template>  
   
   <xsl:template match="xhtml:div">
     <xsl:apply-templates />
@@ -199,6 +195,7 @@
   <xsl:include href="s5-font-styles.xsl"/>
   <xsl:include href="s5-phrase-styles.xsl"/>
   <xsl:include href="s5-quotes.xsl"/>
+  <xsl:include href="s5-lines.xsl"/>
 <!-- Uncomment to support deprecated elements
   <xsl:include href="s5-deprecated.xsl"/>
  -->
@@ -206,16 +203,6 @@
   <xsl:template match="xhtml:hr">
      <!-- TODO: Support hr -->
   </xsl:template>
-  
-  <xsl:template match="xhtml:p">
-    <fo:block text-indent="{$MainIndent}" font-family="{$MainFont}"
-      font-size="{$UsualTextSize}" space-before.minimum="{$ParagraphSpaceMinimum}"
-      space-before.maximum="{$ParagraphSpaceMaximum}" space-before.optimum="{$ParagraphSpacePreferred}"
-      space-after.minimum="{$ParagraphSpaceMinimum}" space-after.maximum="{$ParagraphSpaceMaximum}"
-      space-after.optimum="{$ParagraphSpacePreferred}">
-      <xsl:apply-templates />
-    </fo:block>
-  </xsl:template>  
 
   <xsl:template match="xhtml:span">
     <xsl:apply-templates />
