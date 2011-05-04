@@ -197,13 +197,6 @@
   <xsl:template match="xhtml:br">
     <fo:block/>
   </xsl:template>  
-  
-  <xsl:template match="xhtml:center">
-    <!-- 
-    Ignore
-    Is there way to do this in XSL-FO?s
-     -->
-  </xsl:template>
    
   <xsl:template match="xhtml:code">
     <fo:inline font-family="monospace">

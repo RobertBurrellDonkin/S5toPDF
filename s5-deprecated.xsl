@@ -76,6 +76,7 @@
   <!--  
   <xsl:template match="xhtml:basefont"/>
   <xsl:template match="xhtml:font"/>
+  <xsl:template match="xhtml:center"/>
   -->
 
 </xsl:stylesheet>
