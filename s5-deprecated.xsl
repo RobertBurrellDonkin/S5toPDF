@@ -73,4 +73,9 @@
   </xsl:template>
 
 
+  <!--  
+  <xsl:template match="xhtml:basefont"/>
+  <xsl:template match="xhtml:font"/>
+  -->
+
 </xsl:stylesheet>
