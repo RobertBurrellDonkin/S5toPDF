@@ -82,7 +82,7 @@
   <!-- Space after each item in a list -->
   <xsl:param name='ListItemSpace'>0.5em</xsl:param>
   <!-- Space before and after a list -->
-  <xsl:param name='ListSpaceAround'>0.25em</xsl:param>
+  <xsl:param name='ListSpaceAround'>0.5em</xsl:param>
   
   
   <!--
