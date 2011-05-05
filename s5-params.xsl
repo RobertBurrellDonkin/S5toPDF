@@ -138,5 +138,18 @@
   <xsl:param name='CitationBlockSpacePreferred'>{$ParagraphSpacePreferred}</xsl:param>
   
   
+  
+  <!-- 
+    
+  
+  
+==========================================================
+  Blockquote
+  -->
+  <xsl:param name='BlockquoteTextAlign'>end</xsl:param>
+  <xsl:param name='BlockquoteFontStyle'>italic</xsl:param>
+  <xsl:param name='BlockquoteFontFamily'>serif</xsl:param>
+  <xsl:param name='BlockquoteIndent'>4em</xsl:param>
+  <xsl:param name='BlockquoteTextSize'>24pt</xsl:param>
 
 </xsl:stylesheet>

@@ -40,11 +40,11 @@
   
    <xsl:template match='xhtml:blockquote'>
     <fo:block 
-         text-align="end" 
-         font-style="italic"
-         text-indent="{$MainIndent}" 
-         font-family="{$MainFont}"
-         font-size="{$UsualTextSize}" 
+         text-align="{$BlockquoteTextAlign}" 
+         font-style="{$BlockquoteFontStyle}"
+         text-indent="{$BlockquoteIndent}" 
+         font-family="{$BlockquoteFontFamily}"
+         font-size="{$BlockquoteTextSize}" 
          space-before.minimum="{$ParagraphSpaceMinimum}"
          space-before.maximum="{$ParagraphSpaceMaximum}" 
          space-before.optimum="{$ParagraphSpacePreferred}"
@@ -54,6 +54,24 @@
       <xsl:apply-templates />
     </fo:block>
   </xsl:template>
+
+   <xsl:template match='xhtml:blockquote/xhtml:p'>
+    <fo:block 
+         text-align="{$BlockquoteTextAlign}" 
+         font-style="{$BlockquoteFontStyle}"
+         text-indent="{$BlockquoteIndent}" 
+         font-family="{$BlockquoteFontFamily}"
+         font-size="{$BlockquoteTextSize}" 
+         space-before.minimum="{$ParagraphSpaceMinimum}"
+         space-before.maximum="{$ParagraphSpaceMaximum}" 
+         space-before.optimum="{$ParagraphSpacePreferred}"
+         space-after.minimum="{$ParagraphSpaceMinimum}" 
+         space-after.maximum="{$ParagraphSpaceMaximum}"
+         space-after.optimum="{$ParagraphSpacePreferred}">
+      <xsl:apply-templates />
+    </fo:block>
+  </xsl:template>
+
   
   <xsl:template match="xhtml:cite">
     <fo:inline 
