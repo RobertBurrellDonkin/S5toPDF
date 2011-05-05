@@ -35,7 +35,11 @@
    
   -->
   <!--
-  Slide page size 
+    
+  
+  
+==========================================================
+  Page size 
   -->
   <!-- The height of each slide page -->
   <xsl:param name='SlideHeight'>21.0cm</xsl:param>
@@ -43,8 +47,15 @@
   <xsl:param name='SlideWidth'>29.7cm</xsl:param>
   <!-- The margin surrounding each slide page -->
   <xsl:param name='SlideMargin'>2cm</xsl:param>
+  
+  
+  
   <!-- 
-  Styling
+    
+  
+  
+==========================================================
+  Fonts
   -->
   <!-- Main Font Family -->
   <xsl:param name='MainFont'>sans-serif</xsl:param>
@@ -54,7 +65,13 @@
   <xsl:param name='BiggerTextSize'>24pt</xsl:param>
   <!-- A smaller size for normal blocks such as p, ul, ol -->
   <xsl:param name='SmallerTextSize'>16pt</xsl:param>
+  
+
   <!-- 
+    
+  
+  
+==========================================================
   Lists
   NOTE: space before text and identifier are independent
   -->
@@ -66,7 +83,13 @@
   <xsl:param name='ListItemSpace'>0.5em</xsl:param>
   <!-- Space before and after a list -->
   <xsl:param name='ListSpaceAround'>0.25em</xsl:param>
+  
+  
   <!--
+  
+  
+  
+==========================================================
   Headers 
   -->
   <!-- Space to be inserted before and after a header -->
@@ -83,7 +106,13 @@
   <xsl:param name='H5Size'>18pt</xsl:param>
   <!-- Size for H6 -->
   <xsl:param name='H6Size'>16pt</xsl:param>
-  <!-- 
+  
+  
+  <!--
+    
+  
+  
+========================================================== 
   Paragraph
   -->
   <!-- Maximum space before and after a paragraph -->
@@ -96,9 +125,12 @@
   <xsl:param name='MainIndent'>1em</xsl:param>
   
   <!-- 
-  Styles
-   -->
-  <!-- cite -->
+    
+  
+  
+==========================================================
+  Citations
+  -->
   <xsl:param name='CiteFontStyle'>italic</xsl:param>
   <xsl:param name='CiteFontFamily'>monospace</xsl:param>
   <xsl:param name='CitationBlockIndent'>{$MainIndent}</xsl:param>
