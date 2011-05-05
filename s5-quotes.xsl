@@ -29,28 +29,36 @@
   -->
   
    <xsl:template match="xhtml:div[@class='cite']">
-        <fo:block 
-         text-align="end" 
-         font-style="italic"
-            font-family="{$MainFont}" 
-            font-weight="bold">
+    <fo:block 
+        text-align="end" 
+        font-style="italic"
+        font-family="{$MainFont}" 
+        font-weight="bold">
       <xsl:apply-templates />
     </fo:block>
   </xsl:template>
   
    <xsl:template match='xhtml:blockquote'>
-    <fo:block text-align="end" font-style="italic"
-      text-indent="{$MainIndent}" font-family="{$MainFont}"
-      font-size="{$UsualTextSize}" space-before.minimum="{$ParagraphSpaceMinimum}"
-      space-before.maximum="{$ParagraphSpaceMaximum}" space-before.optimum="{$ParagraphSpacePreferred}"
-      space-after.minimum="{$ParagraphSpaceMinimum}" space-after.maximum="{$ParagraphSpaceMaximum}"
-      space-after.optimum="{$ParagraphSpacePreferred}">
+    <fo:block 
+         text-align="end" 
+         font-style="italic"
+         text-indent="{$MainIndent}" 
+         font-family="{$MainFont}"
+         font-size="{$UsualTextSize}" 
+         space-before.minimum="{$ParagraphSpaceMinimum}"
+         space-before.maximum="{$ParagraphSpaceMaximum}" 
+         space-before.optimum="{$ParagraphSpacePreferred}"
+         space-after.minimum="{$ParagraphSpaceMinimum}" 
+         space-after.maximum="{$ParagraphSpaceMaximum}"
+         space-after.optimum="{$ParagraphSpacePreferred}">
       <xsl:apply-templates />
     </fo:block>
   </xsl:template>
   
   <xsl:template match="xhtml:cite">
-    <fo:inline font-style="{$CiteFontStyle}" font-family="{$CiteFontFamily}">
+    <fo:inline 
+         font-style="{$CiteFontStyle}" 
+         font-family="{$CiteFontFamily}">
       <xsl:apply-templates />
     </fo:inline>
   </xsl:template>
@@ -64,11 +72,16 @@
   </xsl:template>
  
   <xsl:template match="xhtml:pre">
-    <fo:block text-indent="{$MainIndent}" font-family="monospace" 
-      font-size="{$UsualTextSize}" space-before.minimum="{$ParagraphSpaceMinimum}"
-      space-before.maximum="{$ParagraphSpaceMaximum}" space-before.optimum="{$ParagraphSpacePreferred}"
-      space-after.minimum="{$ParagraphSpaceMinimum}" space-after.maximum="{$ParagraphSpaceMaximum}"
-      space-after.optimum="{$ParagraphSpacePreferred}">
+    <fo:block 
+         text-indent="{$MainIndent}" 
+         font-family="monospace" 
+         font-size="{$UsualTextSize}" 
+         space-before.minimum="{$ParagraphSpaceMinimum}"
+         space-before.maximum="{$ParagraphSpaceMaximum}" 
+         space-before.optimum="{$ParagraphSpacePreferred}"
+         space-after.minimum="{$ParagraphSpaceMinimum}" 
+         space-after.maximum="{$ParagraphSpaceMaximum}"
+         space-after.optimum="{$ParagraphSpacePreferred}">
       <!-- TODO: Improve how source is displayed -->
       <xsl:apply-templates />
     </fo:block>
