@@ -77,7 +77,9 @@ Definition Lists
 Ordered Lists
 -->
   <xsl:template match="xhtml:ol">
-    <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
+    <fo:list-block
+      margin="{$ListSpaceAround}"
+    >  
       <xsl:apply-templates />
     </fo:list-block>
   </xsl:template>
@@ -105,7 +107,9 @@ Ordered Lists
 Unordered Lists
 -->
   <xsl:template match="xhtml:ul">
-    <fo:list-block space-before="{$ListSpaceAround}" space-after="{$ListSpaceAround}">
+    <fo:list-block
+      margin="{$ListSpaceAround}"
+    >  
       <xsl:apply-templates />
     </fo:list-block>
   </xsl:template>
