@@ -60,11 +60,11 @@
   <!-- Main Font Family -->
   <xsl:param name='MainFont'>sans-serif</xsl:param>
   <!-- Size for normal blocks such as p, ul, ol -->
-  <xsl:param name='UsualTextSize'>20pt</xsl:param>
+  <xsl:param name='UsualTextSize'>24pt</xsl:param>
   <!-- A bigger size for normal blocks such as p, ul, ol -->
-  <xsl:param name='BiggerTextSize'>24pt</xsl:param>
+  <xsl:param name='BiggerTextSize'>32pt</xsl:param>
   <!-- A smaller size for normal blocks such as p, ul, ol -->
-  <xsl:param name='SmallerTextSize'>16pt</xsl:param>
+  <xsl:param name='SmallerTextSize'>22pt</xsl:param>
   
 
   <!-- 
@@ -93,7 +93,7 @@
   Headers 
   -->
   <!-- Space to be inserted before and after a header -->
-  <xsl:param name='HeaderSpace'>6pt</xsl:param>
+  <xsl:param name='HeaderSpace'>14pt</xsl:param>
   <!-- Size for H1 -->
   <xsl:param name='H1Size'>48pt</xsl:param>
   <!-- Size for H2 -->
