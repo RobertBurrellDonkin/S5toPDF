@@ -79,6 +79,10 @@
   <xsl:param name='ListIndent'>2em</xsl:param>
   <!-- Space before the body text of a list item, should be more than ListIndent-->
   <xsl:param name='ListTextIndent'>4em</xsl:param>
+  <!--   Space before the list item identifier in an ordered list. -->
+  <xsl:param name='OrderedListIndent'>2em</xsl:param>
+  <!-- Space before the body text of a list item, should be more than OrderedListIndent-->
+  <xsl:param name='OrderedListTextIndent'>5em</xsl:param>
   <!-- Space after each item in a list -->
   <xsl:param name='ListItemSpace'>0.5em</xsl:param>
   <!-- Space around a list. Used to set a margin -->

@@ -86,12 +86,12 @@ Ordered Lists
   
   <xsl:template match="xhtml:ol/xhtml:li">
     <fo:list-item space-after="{$ListItemSpace}">
-      <fo:list-item-label start-indent="{$ListIndent}">
+      <fo:list-item-label start-indent="{$OrderedListIndent}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
           <xsl:number />          .
         </fo:block>
       </fo:list-item-label>
-      <fo:list-item-body start-indent="{$ListTextIndent}">
+      <fo:list-item-body start-indent="{$OrderedListTextIndent}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
           <xsl:apply-templates />
         </fo:block>
