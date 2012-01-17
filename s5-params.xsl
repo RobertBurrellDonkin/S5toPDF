@@ -73,20 +73,25 @@
   
 ==========================================================
   Lists
-  NOTE: space before text and identifier are independent
+  NOTE: 
+   * space before text and identifier are independent
+   * separating unit, for example 'em', from value allows 
+     deeper nesting to be computed
   -->
+  <!-- Stores the unit of intendation for lists -->
+  <xsl:param name='ListUnit'>em</xsl:param>
   <!-- Space before the list item identifier -->
-  <xsl:param name='ListIndent'>2em</xsl:param>
+  <xsl:param name='ListIndent'>2<xsl:value-of select="$ListUnit"/></xsl:param>
   <!-- Space before the body text of a list item, should be more than ListIndent-->
-  <xsl:param name='ListTextIndent'>4em</xsl:param>
+  <xsl:param name='ListTextIndent'>4<xsl:value-of select="$ListUnit"/></xsl:param>
   <!--   Space before the list item identifier in an ordered list. -->
-  <xsl:param name='OrderedListIndent'>2em</xsl:param>
+  <xsl:param name='OrderedListIndent'>2<xsl:value-of select="$ListUnit"/></xsl:param>
   <!-- Space before the body text of a list item, should be more than OrderedListIndent-->
-  <xsl:param name='OrderedListTextIndent'>5em</xsl:param>
+  <xsl:param name='OrderedListTextIndent'>5<xsl:value-of select="$ListUnit"/></xsl:param>
   <!-- Space after each item in a list -->
-  <xsl:param name='ListItemSpace'>0.5em</xsl:param>
+  <xsl:param name='ListItemSpace'>0.5<xsl:value-of select="$ListUnit"/></xsl:param>
   <!-- Space around a list. Used to set a margin -->
-  <xsl:param name='ListSpaceAround'>0.5em</xsl:param>
+  <xsl:param name='ListSpaceAround'>0.5<xsl:value-of select="$ListUnit"/></xsl:param>
   
   <!--
   

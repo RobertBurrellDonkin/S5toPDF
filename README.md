@@ -61,6 +61,9 @@ To set a new parameter value on the command line use `-param *name* *value*`
       
 Notes
 =====
+Since 0.1
+---------
+ * Factored out unit from list parameters. Existing names preserved but values now calculated.
 0.1
 ---
 Initial release, minimal but usable. 
