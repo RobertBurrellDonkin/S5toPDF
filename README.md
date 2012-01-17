@@ -58,3 +58,9 @@ A good way to use `S5toPDF` is to check talks, `XSL-FO` processor and `S5toPDF` 
 To set a new parameter value on the command line use `-param *name* *value*`
 
       fop-1.0/fop -xml ThePomodoroTechnique/index.html -xsl S5toPDF/s5.xsl -param MainFont monospace -pdf alt-font-talk.pdf
+      
+Notes
+=====
+0.1
+---
+Initial release, minimal but usable. 
