@@ -85,13 +85,16 @@ Ordered Lists
   </xsl:template>
   
   <xsl:template match="xhtml:ol/xhtml:li">
+  	<xsl:variable name="list_depth_indent" select='count(ancestor::xhtml:li) * $ListDepthStep'/>
+  	<xsl:variable name="list_indent_text" select='$list_depth_indent + $OrderedListTextIndentBase'/>
+  	<xsl:variable name="list_indent" select='$list_depth_indent + $OrderedListIndentBase'/>
     <fo:list-item space-after="{$ListItemSpace}">
-      <fo:list-item-label start-indent="{$OrderedListIndent}">
+      <fo:list-item-label start-indent="{$list_indent}{$ListUnit}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
           <xsl:number />          .
         </fo:block>
       </fo:list-item-label>
-      <fo:list-item-body start-indent="{$OrderedListTextIndent}">
+      <fo:list-item-body start-indent="{$list_indent_text}{$ListUnit}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
           <xsl:apply-templates />
         </fo:block>
@@ -115,13 +118,16 @@ Unordered Lists
   </xsl:template>
 
   <xsl:template match="xhtml:ul/xhtml:li">
+    <xsl:variable name="list_depth_indent" select='count(ancestor::xhtml:li) * $ListDepthStep'/>
+    <xsl:variable name="list_indent_text" select='$list_depth_indent + $OrderedListTextIndentBase'/>
+  	<xsl:variable name="list_indent" select='$list_depth_indent + $OrderedListIndentBase'/>
     <fo:list-item space-after="{$ListItemSpace}">
-      <fo:list-item-label start-indent="{$ListIndent}">
+      <fo:list-item-label start-indent="{$list_indent}{$ListUnit}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
           &#x2022;
         </fo:block>
       </fo:list-item-label>
-      <fo:list-item-body start-indent="{$ListTextIndent}">
+      <fo:list-item-body start-indent="{$list_indent_text}{$ListUnit}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
           <xsl:apply-templates />
         </fo:block>
