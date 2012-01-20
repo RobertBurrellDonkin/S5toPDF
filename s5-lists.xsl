@@ -85,13 +85,15 @@ Ordered Lists
   </xsl:template>
   
   <xsl:template match="xhtml:ol/xhtml:li">
-  	<xsl:variable name="list_depth_indent" select='count(ancestor::xhtml:li) * $ListDepthStep'/>
-  	<xsl:variable name="list_indent_text" select='$list_depth_indent + $OrderedListTextIndentBase'/>
+    <xsl:variable name="list_depth" select='count(ancestor::xhtml:li)'/>
+    <xsl:variable name="list_depth_indent" select='$list_depth * $ListDepthStep'/>
+    <xsl:variable name="list_first_indent_adjust" select='($list_depth = 0) * $OrderedListFirstTextAdjust'/>
+  	<xsl:variable name="list_indent_text" select='$list_depth_indent + $OrderedListTextIndentBase + $list_first_indent_adjust'/>
   	<xsl:variable name="list_indent" select='$list_depth_indent + $OrderedListIndentBase'/>
     <fo:list-item space-after="{$ListItemSpace}">
       <fo:list-item-label start-indent="{$list_indent}{$ListUnit}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">
-          <xsl:number />          .
+          <xsl:number />       .
         </fo:block>
       </fo:list-item-label>
       <fo:list-item-body start-indent="{$list_indent_text}{$ListUnit}">
@@ -118,9 +120,11 @@ Unordered Lists
   </xsl:template>
 
   <xsl:template match="xhtml:ul/xhtml:li">
-    <xsl:variable name="list_depth_indent" select='count(ancestor::xhtml:li) * $ListDepthStep'/>
-    <xsl:variable name="list_indent_text" select='$list_depth_indent + $OrderedListTextIndentBase'/>
-  	<xsl:variable name="list_indent" select='$list_depth_indent + $OrderedListIndentBase'/>
+    <xsl:variable name="list_depth" select='count(ancestor::xhtml:li)'/>
+    <xsl:variable name="list_depth_indent" select='$list_depth * $ListDepthStep'/>
+    <xsl:variable name="list_first_indent_adjust" select='($list_depth = 0) * $ListFirstTextAdjust'/>
+    <xsl:variable name="list_indent_text" select='$list_depth_indent + $ListTextIndentBase + $list_first_indent_adjust'/>
+  	<xsl:variable name="list_indent" select='$list_depth_indent + $ListIndentBase'/>
     <fo:list-item space-after="{$ListItemSpace}">
       <fo:list-item-label start-indent="{$list_indent}{$ListUnit}">
         <fo:block font-size="{$UsualTextSize}" font-family="{$MainFont}">

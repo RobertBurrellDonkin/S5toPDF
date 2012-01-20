@@ -81,15 +81,19 @@
   <!-- Stores the unit of intendation for lists -->
   <xsl:param name='ListUnit'>em</xsl:param>
   <!-- Extra space for each step of list depth -->
-  <xsl:param name='ListDepthStep'>2</xsl:param>
+  <xsl:param name='ListDepthStep'>1</xsl:param>
   <!-- Base part, unrelated to list depth -->
-  <xsl:param name='ListIndentBase'>2</xsl:param>
+  <xsl:param name='ListIndentBase'>1</xsl:param>
   <!-- Base part, unrelated to list depth-->
-  <xsl:param name='ListTextIndentBase'>4</xsl:param>
+  <xsl:param name='ListTextIndentBase'>2</xsl:param>
+  <!-- Adjustment for top level text -->
+  <xsl:param name='ListFirstTextAdjust'>0.5</xsl:param>
   <!-- Base part, unrelated to list depth -->
-  <xsl:param name='OrderedListIndentBase'>2</xsl:param>
+  <xsl:param name='OrderedListIndentBase'>1</xsl:param>
   <!-- Base part, unrelated to list depth -->
-  <xsl:param name='OrderedListTextIndentBase'>5</xsl:param>
+  <xsl:param name='OrderedListTextIndentBase'>2.5</xsl:param>
+  <!-- Adjustment for top level text -->
+  <xsl:param name='OrderedListFirstTextAdjust'>1</xsl:param>
   <!-- Space before the list item identifier -->
   <xsl:param name='ListIndent'><xsl:value-of select="$ListIndentBase"/><xsl:value-of select="$ListUnit"/></xsl:param>
   <!-- Space before the body text of a list item, should be more than ListIndent-->

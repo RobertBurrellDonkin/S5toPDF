@@ -63,6 +63,7 @@ Notes
 =====
 Since 0.1
 ---------
+ * Improved support for lists. Spacing improved for deep lists and gaps tuned.
  * Factored out unit from list parameters. Existing names preserved but values now calculated.
 0.1
 ---
