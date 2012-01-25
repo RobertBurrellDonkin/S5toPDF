@@ -61,8 +61,10 @@ To set a new parameter value on the command line use `-param *name* *value*`
       
 Notes
 =====
-Since 0.1
+Since 0.2
 ---------
+0.2
+---
  * Improved support for lists. Spacing improved for deep lists and gaps tuned.
  * Factored out unit from list parameters. Existing names preserved but values now calculated.
 0.1
